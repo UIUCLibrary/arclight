@@ -8,10 +8,14 @@ assignees: ''
 
 ---
 
-###Description: [What needs to be changed]
+## Description
+[What needs to be changed]
 
-###Current Location: [Description of where it is currently located. Screenshots recommended]
+## Current Location
+[Description of where it is currently located. Screenshots recommended]
 
-###New Location: [Describe where you would like it to be located, can also include mock up/sketch]
+## New Location
+[Describe where you would like it to be located, can also include mock up/sketch]
 
-###Why: [Why should the location be changed]
+## Why
+[Why should the location be changed]
