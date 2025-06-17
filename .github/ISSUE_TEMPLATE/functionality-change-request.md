@@ -20,7 +20,7 @@ assignees: ''
 ## Rationale for functionality
 [Why is this something that is needed? Does it help users? Staff? What happens if this feature is not available?] 
 
-## Solutions
+## Possible Solutions
 [What are possible solutions for this - i.e. change location of text, adding or removing something]
 
 ## Example of functionality in Archon (if/applicable)
