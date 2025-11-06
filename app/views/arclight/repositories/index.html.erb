@@ -1,7 +1,7 @@
 <% breadcrumb :repositories %>
 <% @page_title = t('arclight.views.repositories.title') %>
 
-<div class="al-repositories-hero">
+<section class="al-repositories-hero" aria-label="Repository search">
   <h1 class="al-repositories-title"><%= t('arclight.repositories') %></h1>
 
   <div class="al-repositories-search-container">
@@ -11,7 +11,7 @@
       autofocus: true
     ) %>
   </div>
-</div>
+</section>
 
 <div class="al-repositories">
   <%= render 'shared/breadcrumbs' %>

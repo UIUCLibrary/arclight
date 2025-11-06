@@ -29,18 +29,28 @@
 
 // Grid layout for repository icons
 .al-repositories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  // Flexbox fallback for older browsers
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: ($spacer * 2);
   padding: ($spacer * 2) 0;
-  justify-items: center;
   
-  @media (min-width: 576px) {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-  
-  @media (min-width: 992px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  // Modern browsers with Grid support
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: ($spacer * 2);
+    padding: ($spacer * 2) 0;
+    justify-items: center;
+    
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
   }
 }
 
@@ -54,11 +64,16 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   
   &:hover {
     text-decoration: none;
-    transform: translateY(-5px);
+    
+    // Only apply transform animation if user hasn't requested reduced motion
+    @media (prefers-reduced-motion: no-preference) {
+      transition: all 0.2s ease;
+      transform: translateY(-5px);
+    }
     
     .al-repository-icon-wrapper {
       color: #0056b3;
