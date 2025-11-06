@@ -3,7 +3,7 @@
 
 <div class="al-repositories-hero">
   <h1 class="al-repositories-title"><%= t('arclight.repositories') %></h1>
-  
+
   <div class="al-repositories-search-container">
     <%= render Arclight::SearchBarComponent.new(
       url: search_catalog_path,
@@ -15,9 +15,9 @@
 
 <div class="al-repositories">
   <%= render 'shared/breadcrumbs' %>
-  
+
   <h2 class="al-repositories-section-title"><%= t('arclight.views.repositories.search_collections_in') %></h2>
-  
+
   <div class="al-repositories-grid">
     <%= render partial: 'repository_icon', collection: @repositories, as: :repository %>
   </div>
