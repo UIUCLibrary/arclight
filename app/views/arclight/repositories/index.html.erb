@@ -8,10 +8,7 @@
     <%= render Arclight::SearchBarComponent.new(
       url: search_catalog_path,
       params: params,
-      classes: ['al-repositories-search'],
-      autofocus: true,
-      q: params[:q],
-      search_field: params[:search_field]
+      autofocus: true
     ) %>
   </div>
 </div>
