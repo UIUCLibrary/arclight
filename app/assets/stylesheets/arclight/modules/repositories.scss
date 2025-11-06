@@ -1,3 +1,99 @@
+// Repository index page hero section with prominent search
+.al-repositories-hero {
+  background-color: #f8f9fa;
+  padding: ($spacer * 3) 0;
+  text-align: center;
+  margin-bottom: ($spacer * 2);
+}
+
+.al-repositories-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: ($spacer * 2);
+  color: #333;
+}
+
+.al-repositories-search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $spacer;
+}
+
+.al-repositories-section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: ($spacer * 2);
+  color: #333;
+}
+
+// Grid layout for repository icons
+.al-repositories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: ($spacer * 2);
+  padding: ($spacer * 2) 0;
+  justify-items: center;
+  
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.al-repository-icon-item {
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+.al-repository-icon-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+    
+    .al-repository-icon-wrapper {
+      color: #0056b3;
+    }
+    
+    .al-repository-icon-name {
+      color: #0056b3;
+    }
+  }
+}
+
+.al-repository-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto ($spacer * 0.75) auto;
+  color: #555;
+  transition: color 0.2s ease;
+  
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.al-repository-icon-name {
+  font-size: 0.95rem;
+  color: #333;
+  transition: color 0.2s ease;
+  line-height: 1.3;
+}
+
+// Existing repository show page styles
 .blacklight-repositories-show {
   .al-repository-show-header {
     margin-bottom: ($spacer * 0.5);
