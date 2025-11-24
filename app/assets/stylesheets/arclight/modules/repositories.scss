@@ -64,24 +64,32 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease;
-  
-  &:hover {
+  transition: all 0.15s ease-in-out;
+
+  &:hover,
+  &:focus {
     text-decoration: none;
-    
+
     // Only apply transform animation if user hasn't requested reduced motion
     @media (prefers-reduced-motion: no-preference) {
-      transition: all 0.2s ease;
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
-    
+
     .al-repository-icon-wrapper {
-      color: #0056b3;
+      background-color: #0d6efd;
+      color: #fff;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     }
-    
+
     .al-repository-icon-name {
-      color: #0056b3;
+      color: #0d6efd;
+      font-weight: 500;
     }
+  }
+
+  &:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
   }
 }
 
@@ -92,9 +100,11 @@
   width: 80px;
   height: 80px;
   margin: 0 auto ($spacer * 0.75) auto;
-  color: #555;
-  transition: color 0.2s ease;
-  
+  color: #6c757d;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+
   svg {
     width: 60px;
     height: 60px;
@@ -103,8 +113,8 @@
 
 .al-repository-icon-name {
   font-size: 0.95rem;
-  color: #333;
-  transition: color 0.2s ease;
+  color: #212529;
+  transition: all 0.15s ease-in-out;
   line-height: 1.3;
 }
 
