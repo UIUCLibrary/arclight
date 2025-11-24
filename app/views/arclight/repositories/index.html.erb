@@ -1,9 +1,24 @@
 <% breadcrumb :repositories %>
+<% @page_title = t('arclight.views.repositories.title') %>
 
-<h1 class="sr-only visually-hidden"><%= t('arclight.repositories') %></h1>
+<section class="al-repositories-hero" aria-label="Repository search">
+  <h1 class="al-repositories-title"><%= t('arclight.repositories') %></h1>
+
+  <div class="al-repositories-search-container">
+    <%= render Arclight::SearchBarComponent.new(
+      url: search_catalog_path,
+      params: params,
+      autofocus: true
+    ) %>
+  </div>
+</section>
 
 <div class="al-repositories">
-  <% @page_title = t('arclight.views.repositories.title') %>
   <%= render 'shared/breadcrumbs' %>
-  <%= render @repositories %>
+
+  <h2 class="al-repositories-section-title"><%= t('arclight.views.repositories.search_collections_in') %></h2>
+
+  <div class="al-repositories-grid">
+    <%= render partial: 'repository_icon', collection: @repositories, as: :repository %>
+  </div>
 </div>

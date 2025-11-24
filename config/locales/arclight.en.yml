@@ -48,6 +48,7 @@ en:
           one: 1 collection
           other: "%{count} collections"
           zero: No collections
+        search_collections_in: SEARCH COLLECTIONS IN
         show: "%{name} - Arclight"
         title: Repositories - Arclight
         view_all_collections: View all of our collections

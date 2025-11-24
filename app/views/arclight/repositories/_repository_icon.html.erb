@@ -1,0 +1,10 @@
+<div class="al-repository-icon-item">
+  <%= link_to arclight_engine.repository_path(repository.slug), class: 'al-repository-icon-link' do %>
+    <div class="al-repository-icon-wrapper">
+      <%= render Blacklight::Icons::RepositoryComponent.new %>
+    </div>
+    <div class="al-repository-icon-name">
+      <%= repository.name %>
+    </div>
+  <% end %>
+</div>
