@@ -76,19 +76,19 @@
     }
 
     .al-repository-icon-wrapper {
-      background-color: #0d6efd;
-      color: #fff;
+      background-color: $primary;
+      color: $white;
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     }
 
     .al-repository-icon-name {
-      color: #0d6efd;
+      color: $primary;
       font-weight: 500;
     }
   }
 
   &:focus {
-    outline: 2px solid #0d6efd;
+    outline: 2px solid $primary;
     outline-offset: 2px;
   }
 }
@@ -100,9 +100,9 @@
   width: 80px;
   height: 80px;
   margin: 0 auto ($spacer * 0.75) auto;
-  color: #6c757d;
+  color: $secondary;
   background-color: transparent;
-  border-radius: 0.25rem;
+  border-radius: $border-radius;
   transition: all 0.15s ease-in-out;
 
   svg {
@@ -113,7 +113,7 @@
 
 .al-repository-icon-name {
   font-size: 0.95rem;
-  color: #212529;
+  color: $body-color;
   transition: all 0.15s ease-in-out;
   line-height: 1.3;
 }
